@@ -57,6 +57,7 @@ module EncodingWrapper
           q.action  action
           q.source  source
           q.notify(notify[:url]) if notify.key?(:url)
+          q.notify_format(notify[:format]) if notify.key?(:format)
           q.notify_encoding_errors(notify[:encoding_errors]) if notify.key?(:encoding_errors)
           q.notify_upload(notify[:upload]) if notify.key(:upload)
           q.notify_upload_extended(notify[:upload_extended]) if notify.key(:upload_extended)
@@ -145,6 +146,7 @@ module EncodingWrapper
           q.action  EncodingWrapper::Actions::ADD_MEDIA
           q.source  source
           q.notify(notify[:url]) if notify.key?(:url)
+          q.notify_format(notify[:format]) if notify.key?(:format)
           q.notify_encoding_errors(notify[:encoding_errors]) if notify.key?(:encoding_errors)
           q.notify_upload(notify[:upload]) if notify.key(:upload)
           q.notify_upload_extended(notify[:upload_extended]) if notify.key(:upload_extended)
