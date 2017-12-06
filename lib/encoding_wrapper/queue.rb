@@ -59,10 +59,10 @@ module EncodingWrapper
           q.notify(notify[:url]) if notify.key?(:url)
           q.notify_format(notify[:format]) if notify.key?(:format)
           q.notify_encoding_errors(notify[:encoding_errors]) if notify.key?(:encoding_errors)
-          q.notify_upload(notify[:upload]) if notify.key(:upload)
-          q.notify_upload_extended(notify[:upload_extended]) if notify.key(:upload_extended)
-          q.notify_live_start(notify[:live_start]) if notify.key(:live_start)
-          q.qc_notify(notify[:qc]) if notify.key(:qc)
+          q.notify_upload(notify[:upload]) if notify.key?(:upload)
+          q.notify_upload_extended(notify[:upload_extended]) if notify.key?(:upload_extended)
+          q.notify_live_start(notify[:live_start]) if notify.key?(:live_start)
+          q.qc_notify(notify[:qc]) if notify.key?(:qc)
           q.format  { |f| yield f }
         }
       end.to_xml
@@ -148,10 +148,10 @@ module EncodingWrapper
           q.notify(notify[:url]) if notify.key?(:url)
           q.notify_format(notify[:format]) if notify.key?(:format)
           q.notify_encoding_errors(notify[:encoding_errors]) if notify.key?(:encoding_errors)
-          q.notify_upload(notify[:upload]) if notify.key(:upload)
-          q.notify_upload_extended(notify[:upload_extended]) if notify.key(:upload_extended)
-          q.notify_live_start(notify[:live_start]) if notify.key(:live_start)
-          q.qc_notify(notify[:qc]) if notify.key(:qc)
+          q.notify_upload(notify[:upload]) if notify.key?(:upload)
+          q.notify_upload_extended(notify[:upload_extended]) if notify.key?(:upload_extended)
+          q.notify_live_start(notify[:live_start]) if notify.key?(:live_start)
+          q.qc_notify(notify[:qc]) if notify.key?(:qc)
           q.format  { |f| yield f }
         }
       end.to_xml
